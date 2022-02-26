@@ -6,7 +6,5 @@ build:
   docker:
     web: Dockerfile
 run:
-  web:
-    command: ./conduit -http.address :$PORT -db.type postgres -db.postgres.connection-string $DATABASE_URL
-    image: web
+  web: ./conduit -http.address :$PORT -db.type postgres -db.postgres.connection-string $DATABASE_URL
 
