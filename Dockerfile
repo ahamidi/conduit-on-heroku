@@ -1,4 +1,4 @@
-FROM ghcr.io/conduitio/conduit:latest-nightly
+FROM ahamidi/conduit:latest
 
 ARG PORT
 ARG DATABASE_URL
