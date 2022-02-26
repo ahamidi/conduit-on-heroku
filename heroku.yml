@@ -1,10 +1,12 @@
 setup:
   addons:
     - plan: heroku-postgresql
-      as: DATABASE
+      as: DATABASE_URL
+  config:
+    PORT: 
 build:
   docker:
     web: Dockerfile
 run:
-  web: ./conduit -http.address :$PORT -db.type postgres -db.postgres.connection-string $DATABASE_URL
+  web: ./conduit -http.address $PORT -db.type postgres -db.postgres.connection-string $DATABASE_URL
 
